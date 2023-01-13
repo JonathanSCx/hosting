@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" integrity="sha512-f0tzWhCwVFS3WeYaofoLWkTP62ObhewQ1EZn65oSYDZUg1+CyywGKkWzm8BxaJj5HGKI72PnMH9jYyIFz+GH7g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.css" integrity="sha512-bYPO5jmStZ9WI2602V2zaivdAnbAhtfzmxnEGh9RwtlI00I9s8ulGe4oBa5XxiC6tCITJH/QG70jswBhbLkxPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <!--Inicio del container-->
+    <div id="container">
+      <!--Inicio del Header-->
+      <header id="header">
+        <div class="logo">
+          <h1>InfoFast <i class="fa fa-bolt" aria-hidden="true"></i></h1>
+        </div>
+      </header>
+      <!--Fin del Header-->
+
+      <!--Inicio del contenido-->
+      <section id="content">
+
+        <div id="formulario">
+        
+            <form method="POST" action="/index.html" id="form">
+    
+                <div class="clientes">
+                    <label for="select-secondary">Clientes</label>
+                    <select name="secondary" id="select-secondary">
+                        <option value="0" class="option">Elige un Cliente</option> 
+                    </select>
+                </div>
+        
+                <div class="productos">
+                    <label for="select-primary">Productos</label>
+                    <select name="primary" id="select-primary" onchange="botonHabilitado()">
+                        <option value="0" class="option">Elige un producto</option>
+                    </select>
+                    <div class="agregar">
+                        <button type="button" class="btnAgregar" id="add">+</button>
+                    </div>
+                </div>
+                <div class="listado" id="productosList">
+                    
+                </div>
+                <div class="send">
+                <div class="fecha">    
+                  <label for="fecha">Fecha</label>
+                    <input type="text" id="fecha" placeholder="yyyy/mm/dd 00:00"/>
+                </div>
+        
+                <div class="total-productos">
+                    <label for="total">Total</label>
+                    <input name="total" type="text" id="totalCompra" placeholder="0.0" />
+                </div>
+        
+                <div class="enviar">
+                    <input type="submit" value="Enviar" id="btnEnviar"/>
+                </div>
+                </div>
+        </form>
+    </div>
+      </section>
+      <!--Fin del contenido-->
+
+      <!--Inicio del footer-->
+      <footer id="footer">
+        <div class="logo">
+          <h1>Prueba técnica</h1>
+        </div>
+      </footer>
+      <!--Fin del footer-->
+    </div>
+    <!--Fin del container-->
+
+    <script src="./assets/js/api.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha512-AIOTidJAcHBH2G/oZv9viEGXRqDNmfdPVPYOYKGy3fti0xIplnlgMHUGfuNRzC6FkzIo0iIxgFnr9RikFxK+sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(()=> {
+            $('#fecha').datetimepicker({
+                inline: false,
+                });
+        })
+    </script>
+</body>
+</html>

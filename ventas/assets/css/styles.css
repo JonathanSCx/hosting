@@ -1,0 +1,181 @@
+@import url(font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700");
+
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+#container{
+    width: 90%;
+    height: auto;
+    margin: 0px auto;
+    border: 1px solid rgba(225, 225, 226, 0.8);
+    box-shadow: 0px 0px 10px #ccc;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    min-height: 600px;
+}
+
+/*Inicio del Header*/
+
+#header{
+    display: grid;
+    grid-template-columns: 68% 30%;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    border-bottom: 1px solid rgba(225, 225, 226, 0.8);
+}
+
+.logo{
+    padding: 10px;
+    margin-left: 20px;
+    color: black;
+    text-shadow: 1px 1px 0px #ccc;
+    text-transform: uppercase;
+}
+
+.logo h1{
+    font-family: Helvetica;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 35px;
+}
+
+/*Inico del contenido*/
+
+#content{
+    border: 1px solid rgba(225, 225, 226, 0.8);
+    box-shadow: 0px 0px 10px rgb(158, 150, 150);
+    margin: 20px;
+    padding: 10px;
+}
+
+.clientes{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    align-items: start;
+    margin: 20px;
+    color: black;
+}
+
+.productos{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    align-items: start;
+    margin: 20px;
+    color: black;
+}
+.btnAgregar{
+    background: none;
+    border: solid 1px #474544;
+    color: #599e3d;
+    cursor: pointer;
+    width: 30px;
+    margin: 0px 5px;
+    display: inline-block;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btnAgregar:hover{
+    background: #60b16a;
+    color: #F2F3EB;
+}
+
+select{
+    width: 100%;
+}
+
+.option{
+    width: 100%;
+}
+
+.lsitado{
+    display: grid;
+    grid-template-columns: repeat(5, 2fr);
+    align-items: start;
+    margin: 5px;
+    color: black;
+}
+
+.send{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.fecha{
+    align-items: start;
+    justify-items: space-between;
+    margin: 20px;
+    color: black;
+}
+
+.total-productos{
+    margin: 20px;
+    color: black;
+}
+
+.enviar{
+    grid-column-start: end;
+    margin: 10px;
+}
+
+#btnEnviar{
+    background: none;
+    border: solid 2px #474544;
+    color: #474544;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 10px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#btnEnviar:hover{
+    background: #474544;
+    color: #F2F3EB;
+}
+
+/*Inicio del Footer*/
+
+#footer{
+    display: grid;
+    grid-template-columns: 1fr 15%;
+    align-items: center;
+    justify-content: start;
+    height: 100px;
+    align-items: center;
+    border-top: 1px solid rgba(225, 225, 226, 0.8);
+}
+
+#footer .logo{
+    opacity: 0.5;
+    text-align: auto;
+    margin-right: 20px;
+}
+
+/*Fin del footer*/
+
+
+
